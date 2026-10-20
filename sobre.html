@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre — Rouge</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <a href="index.html" class="logo">Rouge</a>
+    <nav>
+        <a href="receitas.html">Receitas</a>
+        <a href="ebook.html">Ebook</a>
+        <a href="sobre.html" class="active">Sobre</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
+    <button class="login-btn" onclick="window.location.href='login.html'">Entrar</button>
+    <button class="hamburger" id="hamburger" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+    </button>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+    <a href="receitas.html">Receitas</a>
+    <a href="ebook.html">Ebook</a>
+    <a href="sobre.html" class="active">Sobre</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contacto.html">Contacto</a>
+    <button class="login-btn-mobile" onclick="window.location.href='login.html'">Entrar</button>
+</div>
+
+<section class="section page-section">
+    <h2>Sobre</h2>
+    <p>Este projeto nasceu da paixão pela cozinha e partilha de receitas.</p>
+</section>
+
+<script src="menu.js"></script>
+</body>
+</html>

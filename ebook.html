@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ebook — Rouge</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <a href="index.html" class="logo">Rouge</a>
+    <nav>
+        <a href="receitas.html">Receitas</a>
+        <a href="ebook.html" class="active">Ebook</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
+    <button class="login-btn" onclick="window.location.href='login.html'">Entrar</button>
+    <button class="hamburger" id="hamburger" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+    </button>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+    <a href="receitas.html">Receitas</a>
+    <a href="ebook.html" class="active">Ebook</a>
+    <a href="sobre.html">Sobre</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contacto.html">Contacto</a>
+    <button class="login-btn-mobile" onclick="window.location.href='login.html'">Entrar</button>
+</div>
+
+<section class="section page-section">
+    <h2>Ebook Mesa Lenta</h2>
+    <p>O nosso ebook com mais de 50 receitas exclusivas, em PDF e ePub.</p>
+    <p class="ebook-preco">12€</p>
+    <a href="checkout.html" class="ebook-btn-comprar">Comprar ebook</a>
+    <p class="ebook-seguro" style="margin-top:12px;">Pagamento seguro · Download imediato após pagamento</p>
+</section>
+
+<script src="menu.js"></script>
+</body>
+</html>

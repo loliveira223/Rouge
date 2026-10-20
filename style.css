@@ -1,0 +1,808 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* HEADER */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #d9dfcf;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 60px;
+    z-index: 1000;
+}
+
+.logo {
+    font-weight: 700;
+    color: #d3543d;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    gap: 35px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #555;
+    font-size: 15px;
+}
+
+nav a.active {
+    color: #d3543d;
+    font-weight: 600;
+}
+
+.login-btn {
+    background: #d3543d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* HAMBURGER BUTTON */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    z-index: 1100;
+}
+
+.hamburger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: #333;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Animação X quando aberto */
+.hamburger.open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+.hamburger.open span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* MOBILE MENU OVERLAY */
+.mobile-menu {
+    display: flex;
+    position: fixed;
+    inset: 0;
+    background: #d9dfcf;
+    z-index: 999;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 36px;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.mobile-menu.open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+@media (min-width: 769px) {
+    .mobile-menu { display: none; }
+}
+
+.mobile-menu a {
+    text-decoration: none;
+    color: #333;
+    font-size: 26px;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.mobile-menu a:hover,
+.mobile-menu a.active {
+    color: #d3543d;
+}
+
+.mobile-menu .login-btn-mobile {
+    margin-top: 10px;
+    background: #d3543d;
+    color: white;
+    border: none;
+    padding: 12px 32px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    background: url("https://images.unsplash.com/photo-1490645935967-10de6ba17061") center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(255,245,240,.55);
+}
+
+.content {
+    position: relative;
+    max-width: 850px;
+    z-index: 10;
+    padding: 20px;
+}
+
+.badge {
+    display: inline-block;
+    border: 1px solid #d6b7a4;
+    border-radius: 30px;
+    padding: 10px 25px;
+    font-size: 13px;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 80px;
+    line-height: 1;
+}
+
+h1 span {
+    color: #d26a50;
+}
+
+.content p {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.buttons {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-secondary {
+    text-decoration: none;
+    padding: 14px 30px;
+    border-radius: 10px;
+}
+
+.btn-primary {
+    background: #c75f3e;
+    color: white;
+}
+
+.btn-secondary {
+    background: white;
+    border: 1px solid #ddd;
+    color: #333;
+}
+
+/* SECTIONS */
+.section {
+    padding: 100px 10%;
+    background: white;
+}
+
+.page-section {
+    padding-top: 130px;
+}
+
+/* SEARCH BOX */
+.search-box {
+    width: 100%;
+    max-width: 400px;
+    padding: 12px 16px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    margin-top: 20px;
+    display: block;
+}
+
+/* FAQ */
+.faq-item {
+    margin-top: 30px;
+}
+
+.faq-item h4 {
+    font-size: 16px;
+    margin-bottom: 6px;
+    color: #333;
+}
+
+/* FORM */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+}
+
+input, textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+}
+
+form button {
+    background: #c75f3e;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* DOWNLOAD BTN */
+.download-btn {
+    background: #c75f3e;
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    margin-top: 20px;
+}
+
+/* SMOOTH SCROLL */
+html {
+    scroll-behavior: smooth;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 20px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .login-btn {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    h1 {
+        font-size: 42px;
+    }
+
+    .content p {
+        font-size: 16px;
+    }
+
+    .page-section {
+        padding-top: 100px;
+    }
+
+    .section {
+        padding: 80px 6%;
+    }
+}
+
+/* ===== CARDS COM IMAGEM ===== */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 30px;
+}
+
+.card {
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    min-width: unset;
+    padding: 0;
+    text-decoration: none;
+    color: inherit;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+.card-img {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.card:hover .card-img img {
+    transform: scale(1.05);
+}
+
+.card-body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+}
+
+.card-category {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #c75f3e;
+}
+
+.card-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: #222;
+    line-height: 1.2;
+}
+
+.card-desc {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.6;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.card-meta {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-top: 8px;
+    font-size: 12px;
+    color: #888;
+}
+
+.card-author {
+    margin-left: auto;
+    font-style: italic;
+    color: #aaa;
+}
+
+.sem-resultados {
+    color: #888;
+    font-size: 15px;
+    margin-top: 20px;
+}
+
+@media (max-width: 900px) {
+    .cards { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+    .cards { grid-template-columns: 1fr; }
+}
+
+/* ===== PÁGINA DE DETALHE DA RECEITA ===== */
+.receita-hero {
+    margin-top: 64px;
+    height: 420px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+}
+
+.receita-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.65) 100%);
+}
+
+.receita-hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 40px 10%;
+    color: white;
+}
+
+.back-link {
+    display: inline-block;
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    font-size: 13px;
+    margin-bottom: 12px;
+    transition: color 0.2s;
+}
+.back-link:hover { color: white; }
+
+.receita-hero-content .card-category {
+    color: #f5b49a;
+}
+
+.receita-hero-content h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 52px;
+    font-weight: 600;
+    line-height: 1.1;
+    margin: 8px 0;
+    color: white;
+}
+
+.receita-hero-content p {
+    font-size: 15px;
+    color: rgba(255,255,255,0.85);
+    max-width: 560px;
+}
+
+/* INFO BOX */
+.receita-body {
+    padding: 50px 10% 80px;
+    background: #fdf9f7;
+}
+
+.info-box {
+    display: flex;
+    gap: 0;
+    border: 1px solid #e8e0d8;
+    border-radius: 14px;
+    overflow: hidden;
+    background: white;
+    max-width: 640px;
+    margin-bottom: 60px;
+}
+
+.info-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 20px;
+    border-right: 1px solid #e8e0d8;
+    gap: 4px;
+}
+
+.info-item:last-child { border-right: none; }
+
+.info-icon {
+    font-size: 18px;
+    margin-bottom: 4px;
+}
+
+.info-label {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    color: #999;
+    font-weight: 600;
+}
+
+.info-value {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    font-weight: 600;
+    color: #222;
+    line-height: 1;
+}
+
+/* INGREDIENTES + PREPARAÇÃO */
+.receita-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.8fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.ingredientes h2,
+.preparacao h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px;
+    font-weight: 400;
+    color: #222;
+    margin-bottom: 24px;
+}
+
+.ingredientes ul {
+    list-style: none;
+    padding: 0;
+}
+
+.ingredientes ul li {
+    padding: 12px 0;
+    border-bottom: 1px solid #ede8e2;
+    font-size: 14px;
+    color: #444;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.ingredientes ul li::before {
+    content: "•";
+    color: #c75f3e;
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+/* PASSOS */
+.preparacao ol {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.preparacao ol li {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.step-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px;
+    font-weight: 400;
+    color: #c75f3e;
+    line-height: 1;
+    flex-shrink: 0;
+    width: 28px;
+}
+
+.step-text {
+    font-size: 14px;
+    color: #444;
+    line-height: 1.7;
+    padding-top: 6px;
+}
+
+/* RESPONSIVO — detalhe */
+@media (max-width: 768px) {
+    .receita-hero { height: 320px; }
+    .receita-hero-content h1 { font-size: 34px; }
+    .receita-grid { grid-template-columns: 1fr; gap: 40px; }
+    .info-box { max-width: 100%; }
+    .receita-body { padding: 40px 6% 60px; }
+}
+
+
+/* ===== EBOOK ===== */
+.ebook-btn-comprar {
+    display: inline-block;
+    background: #c75f3e;
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    margin-top: 20px;
+}
+.ebook-btn-comprar:hover { background: #b25235; }
+.ebook-preco {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 40px;
+    font-weight: 600;
+    color: #222;
+    margin-top: 16px;
+}
+.ebook-seguro { font-size: 13px; color: #888; }
+
+/* ===== LOGIN / REGISTO ===== */
+.auth-wrap {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.auth-box {
+    width: 100%;
+    max-width: 420px;
+    background: #fdf9f7;
+    border: 1px solid #e8e0d8;
+    border-radius: 14px;
+    padding: 30px;
+}
+.auth-box form { max-width: none; }
+.auth-tabs { display: flex; gap: 8px; margin-bottom: 24px; }
+.auth-tab {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid #e8e0d8;
+    background: none;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #888;
+}
+.auth-tab.active { color: #c75f3e; border-bottom-color: #c75f3e; font-weight: 600; }
+.auth-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    margin-bottom: 18px;
+    color: #222;
+}
+.auth-link { margin-top: 16px; font-size: 13px; color: #666; }
+.auth-link a { color: #c75f3e; cursor: pointer; text-decoration: underline; }
+
+/* ===== CHECKOUT ===== */
+.checkout-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 40px;
+    align-items: start;
+}
+.checkout-resumo,
+.checkout-form-box {
+    background: #fdf9f7;
+    border: 1px solid #e8e0d8;
+    border-radius: 14px;
+    padding: 28px;
+}
+.checkout-resumo h3,
+.checkout-form-box h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    margin-bottom: 18px;
+}
+.checkout-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #ede8e2;
+}
+.checkout-item-nome { font-weight: 500; }
+.checkout-item-desc { font-size: 13px; color: #888; margin-top: 4px; }
+.checkout-item-preco { font-weight: 600; }
+.checkout-total {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 16px;
+    font-weight: 600;
+    font-size: 18px;
+}
+.checkout-seguro { margin-top: 20px; font-size: 13px; color: #666; }
+.checkout-label { font-size: 13px; color: #555; margin-top: 4px; }
+.checkout-form-box form { max-width: none; }
+.checkout-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.checkout-form-box .ebook-btn-comprar { width: 100%; margin-top: 8px; }
+.back-link-dark {
+    display: inline-block;
+    color: #555;
+    text-decoration: none;
+    font-size: 13px;
+    margin-bottom: 24px;
+}
+.back-link-dark:hover { color: #c75f3e; }
+
+/* ===== VALORES + RODAPÉ ===== */
+.footer-valores {
+    background: #f3efe8;
+    padding: 50px 10%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+.footer-logo-box { display: flex; flex-direction: column; }
+.logo-rouge,
+.logo-veggie {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 1;
+}
+.logo-rouge { color: #d3543d; }
+.logo-veggie { color: #6b7a55; }
+.logo-sub { font-size: 12px; color: #888; margin-top: 8px; }
+.valores-lista { display: flex; gap: 40px; flex-wrap: wrap; }
+.valor-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: #555;
+}
+.valor-item svg {
+    width: 56px;
+    height: 56px;
+    fill: none;
+    stroke: #c75f3e;
+    stroke-width: 2;
+}
+
+footer {
+    background: #2b2b2b;
+    color: #ddd;
+    padding: 50px 10% 20px;
+}
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 40px;
+}
+.footer-brand h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    color: white;
+    margin-bottom: 8px;
+}
+.footer-col h4 { color: white; font-size: 14px; margin-bottom: 12px; }
+.footer-col a,
+.footer-col p,
+.footer-brand p {
+    display: block;
+    font-size: 13px;
+    color: #bbb;
+    text-decoration: none;
+    margin-bottom: 8px;
+}
+.footer-col a:hover { color: #f5b49a; }
+.footer-bottom {
+    margin-top: 30px;
+    padding-top: 16px;
+    border-top: 1px solid #444;
+    font-size: 12px;
+    color: #888;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .checkout-layout { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr; gap: 24px; }
+    .footer-valores { padding: 40px 6%; flex-direction: column; align-items: flex-start; }
+}

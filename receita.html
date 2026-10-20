@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receita — Rouge</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <a href="index.html" class="logo">Rouge</a>
+    <nav>
+        <a href="receitas.html" class="active">Receitas</a>
+        <a href="ebook.html">Ebook</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
+    <button class="login-btn" onclick="window.location.href='login.html'">Entrar</button>
+    <button class="hamburger" id="hamburger" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+    </button>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+    <a href="receitas.html" class="active">Receitas</a>
+    <a href="ebook.html">Ebook</a>
+    <a href="sobre.html">Sobre</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contacto.html">Contacto</a>
+    <button class="login-btn-mobile" onclick="window.location.href='login.html'">Entrar</button>
+</div>
+
+<div id="receita-detalhe" class="receita-page"></div>
+
+<script src="menu.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", async function () {
+    const params = new URLSearchParams(window.location.search);
+    const id = parseInt(params.get("id"));
+
+    try {
+        const res = await fetch("receitas.json");
+        const receitas = await res.json();
+        const receita = receitas.find(r => r.id === id);
+
+        if (!receita) {
+            document.getElementById("receita-detalhe").innerHTML = "<p style='padding:120px 10%'>Receita não encontrada.</p>";
+            return;
+        }
+
+        document.title = `${receita.title} — Rouge`;
+
+        document.getElementById("receita-detalhe").innerHTML = `
+            <!-- HERO DA RECEITA -->
+            <div class="receita-hero" style="background-image: url('${receita.image}')">
+                <div class="receita-hero-overlay"></div>
+                <div class="receita-hero-content">
+                    <a href="receitas.html" class="back-link">← Voltar às receitas</a>
+                    <span class="card-category">${receita.category.toUpperCase()}</span>
+                    <h1>${receita.title}</h1>
+                    <p>${receita.description}</p>
+                </div>
+            </div>
+
+            <!-- INFO BOX -->
+            <div class="receita-body">
+                <div class="info-box">
+                    <div class="info-item">
+                        <span class="info-icon">🕐</span>
+                        <span class="info-label">PREPARAÇÃO</span>
+                        <span class="info-value">${receita.prep}</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icon">🍳</span>
+                        <span class="info-label">COZEDURA</span>
+                        <span class="info-value">${receita.cook}</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icon">👤</span>
+                        <span class="info-label">DOSES</span>
+                        <span class="info-value">${receita.servings}</span>
+                    </div>
+                </div>
+
+                <!-- INGREDIENTES + PREPARAÇÃO -->
+                <div class="receita-grid">
+                    <div class="ingredientes">
+                        <h2>Ingredientes</h2>
+                        <ul>
+                            ${receita.ingredients.map(i => `<li>${i}</li>`).join("")}
+                        </ul>
+                    </div>
+
+                    <div class="preparacao">
+                        <h2>Preparação</h2>
+                        <ol>
+                            ${receita.steps.map((s, i) => `
+                                <li>
+                                    <span class="step-num">${i + 1}</span>
+                                    <span class="step-text">${s}</span>
+                                </li>
+                            `).join("")}
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        `;
+
+    } catch (err) {
+        document.getElementById("receita-detalhe").innerHTML = "<p style='padding:120px 10%'>Erro ao carregar receita.</p>";
+    }
+});
+</script>
+</body>
+</html>

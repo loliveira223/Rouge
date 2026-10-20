@@ -1,0 +1,172 @@
+[
+  {
+    "id": 1,
+    "title": "Bolo de Azeite e Laranja",
+    "description": "Bolo húmido de azeite com raspa de laranja e amêndoa. Para acompanhar café da tarde.",
+    "category": "Sobremesa",
+    "image": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=600&q=80",
+    "time": "55 min",
+    "prep": "15m",
+    "cook": "40m",
+    "servings": 8,
+    "author": "RougeVeggie",
+    "ingredients": [
+      "200 ml de azeite suave",
+      "200 g de açúcar",
+      "100 g de farinha maizena",
+      "Raspa e sumo de 2 laranjas",
+      "250 g de farinha",
+      "50 g de amêndoa moída",
+      "1 colher de chá de fermento",
+      "Pitada de sal"
+    ],
+    "steps": [
+      "Bater a farinha maizena com açúcar até obter uma mistura homogénea.",
+      "Juntar azeite, sumo e raspa de laranja.",
+      "Incorporar farinha, amêndoa, fermento e sal.",
+      "Verter em forma untada e levar ao forno a 180 °C por 35-40 minutos.",
+      "Polvilhar com açúcar em pó."
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Salada de Grão com Limão",
+    "description": "Grão-de-bico com pepino, tomate-cereja, salsa e vinagrete de limão. Fresca e pronta em minutos.",
+    "category": "Salada",
+    "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600&q=80",
+    "time": "15 min",
+    "prep": "15m",
+    "cook": "0m",
+    "servings": 4,
+    "author": "RougeVeggie",
+    "ingredients": [
+      "400 g de grão-de-bico cozido",
+      "1 pepino em cubos",
+      "200 g de tomate-cereja",
+      "1 molho de salsa fresca",
+      "Sumo de 1 limão",
+      "3 colheres de sopa de azeite",
+      "Sal e pimenta a gosto"
+    ],
+    "steps": [
+      "Escorrer e lavar bem o grão-de-bico.",
+      "Cortar o pepino em cubos pequenos e o tomate-cereja ao meio.",
+      "Picar a salsa finamente.",
+      "Misturar tudo numa taça grande.",
+      "Temperar com limão, azeite, sal e pimenta. Servir fresca."
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Massa Alho, Azeite e Pimenta",
+    "description": "Aglio e olio à portuguesa: esparguete, muito alho dourado, malagueta e salsa. Cinco ingredientes.",
+    "category": "Massa",
+    "image": "https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=600&q=80",
+    "time": "20 min",
+    "prep": "5m",
+    "cook": "15m",
+    "servings": 2,
+    "author": "RougeVeggie",
+    "ingredients": [
+      "200 g de esparguete",
+      "4 dentes de alho fatiados",
+      "1 malagueta seca",
+      "5 colheres de sopa de azeite",
+      "Salsa fresca picada",
+      "Sal grosso"
+    ],
+    "steps": [
+      "Cozer o esparguete em água com sal até ficar al dente.",
+      "Dourar o alho fatiado no azeite em lume médio sem deixar queimar.",
+      "Juntar a malagueta e retirar do lume.",
+      "Escorrer a massa e misturar na frigideira com um pouco da água da cozedura.",
+      "Finalizar com salsa picada e servir imediatamente."
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Sopa de Abóbora e Gengibre",
+    "description": "Cremosa, aromática e reconfortante. Abóbora com gengibre fresco e leite de coco.",
+    "category": "Sopa",
+    "image": "https://images.unsplash.com/photo-1476718406336-bb5a9690ee2a?w=600&q=80",
+    "time": "40 min",
+    "prep": "10m",
+    "cook": "30m",
+    "servings": 4,
+    "author": "RougeVeggie",
+    "ingredients": [
+      "800 g de abóbora em cubos",
+      "1 cebola picada",
+      "2 cm de gengibre fresco ralado",
+      "200 ml de leite de coco",
+      "600 ml de caldo de legumes",
+      "2 colheres de sopa de azeite",
+      "Sal, pimenta e noz-moscada"
+    ],
+    "steps": [
+      "Refogar a cebola no azeite até ficar translúcida.",
+      "Juntar o gengibre e a abóbora e saltear 3 minutos.",
+      "Adicionar o caldo e cozinhar 20 minutos até a abóbora estar macia.",
+      "Triturar tudo com o leite de coco até obter um creme liso.",
+      "Retificar os temperos e servir com um fio de azeite."
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Pão de Centeio Caseiro",
+    "description": "Pão rústico de centeio com sementes de girassol. Crocante por fora, macio por dentro.",
+    "category": "Padaria",
+    "image": "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600&q=80",
+    "time": "90 min",
+    "prep": "20m",
+    "cook": "40m",
+    "servings": 8,
+    "author": "RougeVeggie",
+    "ingredients": [
+      "300 g de farinha de centeio",
+      "200 g de farinha de trigo",
+      "1 saqueta de fermento seco",
+      "1 colher de chá de sal",
+      "300 ml de água morna",
+      "50 g de sementes de girassol"
+    ],
+    "steps": [
+      "Misturar as farinhas, o fermento e o sal numa taça grande.",
+      "Adicionar a água morna e amassar 10 minutos até obter uma massa elástica.",
+      "Incorporar as sementes e deixar levedar 1 hora tapado.",
+      "Moldar o pão e colocar em forma untada.",
+      "Cozer a 200 °C durante 35-40 minutos até estar dourado e soar oco."
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Caril de Grão e Espinafres",
+    "description": "Caril vegano rico em especiarias, com grão cremoso e espinafres frescos. Servir com arroz basmati.",
+    "category": "Principal",
+    "image": "https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?w=600&q=80",
+    "time": "35 min",
+    "prep": "10m",
+    "cook": "25m",
+    "servings": 4,
+    "author": "RougeVeggie",
+    "ingredients": [
+      "200 g de arroz basmati",
+      "400 g de grão-de-bico cozido",
+      "200 g de espinafres frescos",
+      "2 colheres de sopa de azeite",
+      "1 cebola picada",
+      "2 dentes de alho",
+      "400 ml de leite de coco",
+      "2 colheres de chá de caril em pó",
+      "1 colher de chá de curcuma",
+      "Sal e coentros frescos"
+    ],
+    "steps": [
+      "Refogar a cebola e o alho no azeite até dourarem.",
+      "Adicionar as especiarias e cozinhar 1 minuto para libertar os aromas.",
+      "Juntar o grão e o leite de coco e deixar ferver 15 minutos.",
+      "Adicionar os espinafres e cozinhar mais 3 minutos.",
+      "Servir com arroz basmati e coentros frescos picados."
+    ]
+  }
+]
